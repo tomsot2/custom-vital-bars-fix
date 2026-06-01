@@ -21,7 +21,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Build plugin JAR
-        run: ./gradlew build
+        run: |
+          chmod +x gradlew
+          ./gradlew build
 
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
