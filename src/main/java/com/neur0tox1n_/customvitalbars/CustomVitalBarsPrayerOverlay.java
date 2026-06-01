@@ -299,7 +299,7 @@ public class CustomVitalBarsPrayerOverlay extends OverlayPanel{
     @Subscribe
     public void onConfigChanged( ConfigChanged event )
     {
-        if ( CustomVitalBarsConfig.GROUP.equals(event.getGroup()) && event.getKey().equals("prayerRelativeToSidebarPanel") )
+        if ( event.getKey().equals("prayerRelativeToSidebarPanel") )
         {
             toggleLock( false );
         }
